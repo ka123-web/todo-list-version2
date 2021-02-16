@@ -25,20 +25,20 @@ const Todo = ({todos,completeTodo,removeTodo,updateTodo}) =>{
     
        <div>
             {todos.map((todo,index) =>(
-                <div className={todo.isComplete? 'todo-row complete': 'todo-row' } 
-                    key ={index}>
+                    <div className={todo.isComplete? 'todo-row complete': 'todo-row' } 
+                        key ={index}>
 
-                        <div
+                    <div
                         key={todo.id} onClick = {()=> completeTodo(todo.id)}>
-                           {todo.text}
-                        </div>
-                        <div className="icons">
-                            <RiCloseCircleLine onClick={()=>removeTodo(todo.id)}
-                            className="delete-icon"/>
+                        {todo.text}
+                    </div>
+                    <div className="icons">
+                        <RiCloseCircleLine onClick={()=>removeTodo(todo.id)}
+                        className="delete-icon"/>
 
-                            <TiEdit onClick={()=>setEditItem({id:todo.id, value:todo.text})}
-                            className="edit-icon"/>
-                        </div>
+                        <TiEdit onClick={()=>setEditItem({id:todo.id, value:todo.text})}
+                        className="edit-icon"/>
+                    </div>
                 </div>
             ))}
       </div> 

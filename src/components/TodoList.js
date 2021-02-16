@@ -13,6 +13,7 @@ function TodoList() {
 
         const newTodos = [todo,...todos]
        setTodos(newTodos);
+       console.log('newtodos',newTodos);
     }
     const updateTodo = (todoId,newVaalue) =>
     {
@@ -27,6 +28,7 @@ function TodoList() {
             return todo;
         })
         setTodos(updateTodos);
+        console.log('updatedtodos',updateTodos);
     }
     const removeTodo =(id)=>
     {
